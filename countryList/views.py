@@ -46,9 +46,6 @@ class CountryAll(APIView):
                                     # print(cont[j]["name"]["common"].lower(), "  ", countries[i]["country"].lower(), " ",  cont[j]["continents"])
                                     count_id+=1
 
-
-                                    loca_continent = {} 
-                                    # loca_continent[cont[j]["continents"]] = 
                                     finals = {
                                         "id": f"{count_id}",
                                         "continent": " ".join(cont[j]["continents"]),
@@ -65,6 +62,4 @@ class CountryAll(APIView):
 
         
         return Response({"res":result, "status":status.HTTP_200_OK})
-        # return Response({"final":finalRes,"data":countries["data"][0]["country"],"cont":cont[0]["continents"], "status":200})
-        # return Response({"cont":cont[0]["continents"], "status":200})
 
